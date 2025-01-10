@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --------------------- */
+
+/* Βασικές ρυθμίσεις */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  font-family: Arial, sans-serif;
+  background-color: #0a021b;
+  color: #fff;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+/* Header */
+header {
+  background-color: #001f3f;
+  padding: 20px;
+  text-align: start;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul.menu li {
+  display: inline;
+}
+
+nav ul.menu li button {
+  color: #fff;
+  background: none;
+  border: 2px solid #015171b4;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+nav ul.menu li button:hover {
+  background-color: #1e90ff;
+  color: #000;
+}
+
+/* Main Content */
+main {
+  flex: 1; 
+  padding: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  background-color: #015171b4;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.product h3 {
+  color: #f3f3f3;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  border: none;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #fff;
+  color: #1e90ff;
+}
+
+/* Cart Section */
+.cart-item {
+  margin: 2px ;
+  padding: 2px;
+  background-color: #1e90ff;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #001f3f;
+  color: #fff;
+  width: 100%; 
+}
+
+/* Μορφοποίηση για το container των εικόνων των προϊόντων */
+.photo-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Σκιά για βάθος */
+  padding-top: 100px;
+  margin: 15px; /* Περιθώριο γύρω από την εικόνα */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Εφέ κατά την αλληλεπίδραση */
+}
+
+.photo-container:hover {
+  transform: scale(1.05); /* Ελαφριά αύξηση μεγέθους όταν το hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ισχυρότερη σκιά κατά το hover */
+}
+
+/* Μορφοποίηση για την εικόνα των προϊόντων */
+.photo {
+  width: 100%; /* Καταλαμβάνει όλο το πλάτος του container */
+  height: auto; /* Διατηρεί την αναλογία διαστάσεων */
+  object-fit: cover; /* Καλύπτει το container χωρίς παραμόρφωση */
+}
